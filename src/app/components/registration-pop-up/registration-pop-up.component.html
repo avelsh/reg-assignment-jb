@@ -1,0 +1,28 @@
+<div class="container">
+    <div *ngIf="!registrated">
+    <h1 class="white-color">Sign Up</h1>
+    <h3 class="white-color text-styles">Please fill out the following fields to register. If you already have an account, it will be automa-tically deleted and replaced with a new one. </h3>
+    <form (ngSubmit)="signUp(signupForm.form.value)" #signupForm="ngForm">
+        <div class="form-group">
+        <input matInput placeholder="Username" #username name="username" ngModel required class="mat-input form-control">
+        <mat-error *ngIf="signupForm.form.controls['username']?.invalid && signupForm.form.controls['username'].touched">Username is required</mat-error>
+      </div>
+      <div class="form-group">
+        <input matInput type="email" #email placeholder="Email" name="email" ngModel required class="mat-input form-control">
+        <mat-error *ngIf="signupForm.form.controls['email']?.invalid && signupForm.form.controls['email'].touched">Email is required</mat-error>
+      </div>
+      <div class="form-group">
+        <input matInput type="text" #password placeholder="Password" name="password" ngModel required class="mat-input form-control">
+        <mat-error *ngIf="signupForm.form.controls['password']?.invalid && signupForm.form.controls['password'].touched">Password is required</mat-error>
+      </div>
+      <div class="dialog-buttons-container">
+        <button mat-raised-button color="primary" type="close" (click)="close()" style="margin-right: 8px;">Close</button>
+        <button mat-raised-button color="primary" [disabled]="signupForm.invalid" type="submit">Sign Up</button>
+      </div>
+    </form>
+    </div>
+    <div *ngIf="registrated">
+        <h1 class="white-color">Congratulations!</h1>
+        <h3 class="white-color text-align">You have successfully registered, you can now log in. </h3>
+    </div>
+</div>

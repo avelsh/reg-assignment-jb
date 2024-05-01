@@ -1,0 +1,10 @@
+<div class="img js-fullheight" class="top-bar-container">
+    <div style="background-color: #fff; height: 100px; width: 100px; margin-left: 150px;">
+        <a href="https://jetbrains.com/company">
+            <img class="top-bar-img-size" src="assets/jetbrains_logo_icon_145150.png" alt="JetBrains_logo">
+        </a>
+    </div>
+    <div class="form-group" style="margin-right: 150px;" *ngIf="isAuthenticated$ | async">
+        <button type="submit" class="form-control btn btn-primary submit px-3" (click)="logOut()">Log Out</button>
+    </div>
+</div>

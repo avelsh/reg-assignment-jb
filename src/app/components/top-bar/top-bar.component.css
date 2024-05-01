@@ -1,0 +1,11 @@
+.top-bar-container {
+    background-color: #3c3d40; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.top-bar-img-size {
+    height: 100px; 
+    width: 100px;
+}

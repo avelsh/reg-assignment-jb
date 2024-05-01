@@ -1,0 +1,30 @@
+.dialog-buttons-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+:host {
+    background-color: #3c3d40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .container {
+    background-color: #3c3d40;
+    padding: 20px;
+    border-radius: 150px;
+    width: 400px;
+    text-align: center;
+  }
+  
+  input.mat-input {
+    color: white;
+    margin: 5px
+  }
+  
+  button.mat-raised-button {
+    margin-top: 20px;
+  }
